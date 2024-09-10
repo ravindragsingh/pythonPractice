@@ -26,6 +26,7 @@ else:
 '''
 
 #a Game: Start, Stop, Quit
+'''
 print("Type Start to Start the car")
 print("Type Stop to Stop the Car")
 print("Type Quit to quit the game")
@@ -57,3 +58,23 @@ while True:
     else:
         print("i dont understand")
         #break
+
+        '''
+
+'''
+#list - program to print the price of 
+prices = [10,20,30]
+total = 0
+for price in prices:
+    total = total + price
+    print(f"Total = {total}")
+'''
+
+#list & nested loop exercise
+patterns = [5,2,5,2,2]
+for k in patterns:
+    print('x'*k)
+
+
+
+
