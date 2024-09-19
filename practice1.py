@@ -66,14 +66,42 @@ while True:
 prices = [10,20,30]
 total = 0
 for price in prices:
-    total = total + price
-    print(f"Total = {total}")
-'''
+    #total = total + price
+    #print(f"Total = {total}")
+    print(f'{price},"GAP"{prices}')
 
+'''
+'''
 #list & nested loop exercise
 patterns = [5,2,5,2,2]
 for k in patterns:
     print('x'*k)
+    
+'''
+'''
+#list more example
+name = ["Ravubdra", "Ravi","Pri","Goldu","Gudiya"]
+print(name[1])
+print(name[2:])
+
+#updating an item in a list
+name[0] = "Ravindra"
+print(name[0])
+'''
+
+#program to find the largest number in a list
+
+number = [11,23,13,44,15,26]
+#print(number[3])
+largetNumber = number[0]
+#i=1
+for k in number:
+    if largetNumber < k:
+        largetNumber = k
+#    i=i+1
+    #if i<6:
+       # i=i+3
+print(largetNumber)
 
 
 
