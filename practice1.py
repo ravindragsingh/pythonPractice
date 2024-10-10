@@ -89,19 +89,25 @@ name[0] = "Ravindra"
 print(name[0])
 '''
 
+'''
 #program to find the largest number in a list
-
 number = [11,23,13,44,15,26]
-#print(number[3])
 largetNumber = number[0]
-#i=1
 for k in number:
     if largetNumber < k:
         largetNumber = k
-#    i=i+1
-    #if i<6:
-       # i=i+3
+
 print(largetNumber)
+
+'''
+#removing suplicate in a list
+number = [11,23,11,15,13,44,15,26]
+number.sort()
+i=0
+print(number)
+for k in number:
+    if k == number:
+        largetNumber = k
 
 
 
