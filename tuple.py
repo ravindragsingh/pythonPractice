@@ -13,7 +13,7 @@ print("Age:", age)  # Output: Age: 30
 print("Profession:", profession)  # Output: Profession: Engineer
 
 # Attempting to modify the tuple
-# person[1] = 31  # This will raise a TypeError: 'tuple' object does not support item assignment
+''' person[1] = 31  # This will raise a TypeError: 'tuple' object does not support item assignment'''
 
 #tuple concatination
 tuple1 = (1, 2, 3)
