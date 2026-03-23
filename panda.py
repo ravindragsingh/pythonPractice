@@ -38,6 +38,151 @@ Columns represent variables or attributes (like features in a dataset).
 Accessing Data
 You can access rows, columns, or specific elements:
 
+/*
+A Series is like a single column of data.
+
+Example:
+
+import pandas as pd
+
+data = [10, 20, 30, 40]
+
+s = pd.Series(data)
+
+print(s)
+
+Output
+
+0    10
+1    20
+2    30
+3    40
+
+Explanation
+
+Part	Meaning
+0,1,2,3	Index
+10,20,30	Values
+
+You can access data like:
+
+print(s[2])
+
+Output
+
+30
+5. Pandas DataFrame
+
+A DataFrame is the most important structure in pandas.
+
+It is like an Excel table.
+
+Example:
+
+import pandas as pd
+
+data = {
+    "Name": ["John", "Lisa", "Mike"],
+    "Age": [28, 34, 40],
+    "City": ["NY", "LA", "Chicago"]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+Output
+
+   Name   Age    City
+0  John   28      NY
+1  Lisa   34      LA
+2  Mike   40   Chicago
+6. Reading Data From Files
+
+Pandas can read many file formats.
+
+Read CSV
+df = pd.read_csv("data.csv")
+Read Excel
+df = pd.read_excel("data.xlsx")
+Read JSON
+df = pd.read_json("data.json")
+7. Viewing Data
+
+Common commands to inspect data.
+
+df.head()
+
+Shows first 5 rows.
+
+df.tail()
+
+Shows last 5 rows.
+
+df.info()
+
+Shows column types.
+
+df.describe()
+
+Shows statistics like mean, min, max.
+
+8. Selecting Data
+Select column
+df["Name"]
+Multiple columns
+df[["Name","Age"]]
+Select row
+df.loc[0]
+Select by position
+df.iloc[1]
+9. Filtering Data
+
+Example:
+
+df[df["Age"] > 30]
+
+Output
+
+Name  Age   City
+Lisa  34    LA
+Mike  40  Chicago
+10. Adding a Column
+df["Salary"] = [50000, 60000, 70000]
+11. Deleting Column
+df.drop("Salary", axis=1)
+12. Handling Missing Values
+
+Check missing data
+
+df.isnull()
+
+Remove missing rows
+
+df.dropna()
+
+Fill missing values
+
+df.fillna(0)
+13. Sorting Data
+
+Sort by column:
+
+df.sort_values("Age")
+
+Descending:
+
+df.sort_values("Age", ascending=False)
+14. Grouping Data
+
+Very powerful feature.
+
+Example:
+
+df.groupby("City")["Age"].mean()
+
+This calculates average age per city.
+ */
 1. Access a Column
 print(df["Name"])  # Access by column name
 
