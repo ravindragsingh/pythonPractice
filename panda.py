@@ -39,68 +39,53 @@ Accessing Data
 You can access rows, columns, or specific elements:
 
 1. Access a Column
-python
-Copy code
 print(df["Name"])  # Access by column name
+
 2. Access Multiple Columns
-python
-Copy code
 print(df[["Name", "Salary"]])
+
 3. Access Rows by Index
-python
-Copy code
 print(df.loc[0])  # Access row by label/index
 print(df.iloc[1])  # Access row by numerical index
+
 4. Access Specific Elements
-python
-Copy code
 print(df.loc[0, "Name"])  # Access the Name column in the first row
 print(df.iloc[2, 1])      # Access the element at 2nd row, 1st column
 Modifying Data
 You can add, update, or delete rows and columns:
 
 1. Add a New Column
-python
-Copy code
 df["Bonus"] = [5000, 6000, 7000]
 print(df)
+
 2. Update Column Values
-python
-Copy code
 df["Age"] = df["Age"] + 1
 print(df)
+
 3. Delete a Column
-python
-Copy code
 df = df.drop("Bonus", axis=1)  # axis=1 for columns
 print(df)
+
 4. Add a New Row
-python
-Copy code
 new_row = {"Name": "David", "Age": 28, "Salary": 55000}
 df = df.append(new_row, ignore_index=True)
 print(df)
+
 5. Delete a Row
-python
-Copy code
 df = df.drop(1)  # Drop row with index 1
 print(df)
 DataFrame Operations
+
 1. Statistical Summary
-python
-Copy code
 print(df.describe())  # Summary statistics for numerical columns
+
 2. Filtering Rows
-python
-Copy code
 print(df[df["Salary"] > 55000])  # Rows with Salary > 55000
+
 3. Sorting
-python
-Copy code
 print(df.sort_values("Salary", ascending=False))  # Sort by Salary descending
+
 4. Grouping
-python
-Copy code
 print(df.groupby("Age")["Salary"].mean())  # Average salary by age
 '''
 
