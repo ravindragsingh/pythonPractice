@@ -4,34 +4,30 @@
 ## df  i.e data frame is very useful feature of panda
 
 import csv
-from matplotlib.pyplot import title
 import pandas as pd
 
 df = pd.read_csv("C:/Users/ravindra.pratapsingh/Downloads/movies.csv")
 print(df.head(1))
-#print(df.imdb_rating.min())
-#print(df.imdb_rating.mean())
+print(df.imdb_rating.min())
+print(df.imdb_rating.mean())
 bollywoodMovies = df[df.industry == "Bollywood"]  ## creating a new data frame for bollywood movies only
 hollywoodMovies = df[df.industry == "Hollywood"]  ## creating a new data frame for hollywood movies only
 
 print(hollywoodMovies.imdb_rating.max())
 
 ##dataframe
-# print(df['industry'].unique()) #this can also be written as df.industry.unique()
-# print(df.industry.value_counts()) #
-# print(df.language.value_counts()) #
-# subDataFrame = df[['title','imdb_rating']] #creating a new data frame
+print(df['industry'].unique()) #this can also be written as df.industry.unique()
+print(df.industry.value_counts()) #
+print(df.language.value_counts()) #
+subDataFrame = df[['title','imdb_rating']] #creating a new data frame
 
-#print(df[df.studio == "Marvel Studios"]) #printing data on specific condition
+print(df[df.studio == "Marvel Studios"]) #printing data on specific condition
 # print(df.describe)
 
 #creating new column 
 
 df["age"] = df['release_year'].apply(lambda x: 2024 -x)
-#print(df.head(4))
-#df.loc[row , column]
-print(df.loc[0:1, "industry"] ) #accessing specific element
-print(df.iloc[1]) #accessing specific element by position
+print(df.head(4))
 
 
 '''
